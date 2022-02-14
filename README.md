@@ -7,6 +7,20 @@ found to need six guesses: MUMMY, SLUSH and YUMMY.
 
 "Deep" is in constrast to most optimization approaches on Wordle data which use greedy approaches, which are "shallow" with respect to the decision tree.
 
+This version can make use of larger and current word lists. The goal here is to use the full candidate list for guesses (wordlists/guesses/csw19_l5.txt) for attempts at a current possible Wordle word list (wordlists/answers/possibles.txt). The possibles word list is simply the list of 2315 possible Wordle answers with previous answers removed (as of 12 Feb 2022).
+
+Using longer word lists can be computationally costly. A curated guess list was created and placed in guesses.
+
+## Use
+
+### Build (OSX)
+`g++ fullSolveInFive.cpp -o fullSolveInFive.bin -std=c++20`
+
+### Run
+`./fullSolveInFive.bin`
+
+## Files
+
 ### common.txt
 A list of my collated "common" five letter English words. Combines the Wordle solutions with other lists and adds plurals and past tense words.
 
